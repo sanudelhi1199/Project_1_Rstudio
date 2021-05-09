@@ -42,3 +42,7 @@ print("my first markdown code")
 ```{r code2,echo=FALSE}
 print("this will not show code")
 ```
+
+# inserting link
+
+[this is my first link](http://google.com)
