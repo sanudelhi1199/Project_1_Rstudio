@@ -30,3 +30,9 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+# testing my first code in markdown 
+
+```{r code}
+print("my first markdown code")
+```
