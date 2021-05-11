@@ -1,0 +1,33 @@
+---
+title: "3_Printfunction_Dataset"
+author: "sanudelhi1199"
+date: "5/11/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# how to use print() function to print data
+
+```{r print}
+
+a <- "my name is hitesh"
+
+print(a)
+
+
+### how to use paste() function to combine diffrent strings 
+
+
+
+print(paste("my name", "is hitesh"))
+
+
+print(paste("hello","world", sep = "-"))
+
+
+print(paste0("my name","is hitesh "))
+
+```
