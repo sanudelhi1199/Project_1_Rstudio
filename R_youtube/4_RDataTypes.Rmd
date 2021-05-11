@@ -79,9 +79,77 @@ v11 <- letters[1:26]
 v11
 
 
+### how to do external cohersion using as.xxx() function
+
+v12 <- 1:10
+
+v12
+
+class(v12)
+
+v13 <-as.numeric(v12)
+
+class(v13)
+
+v14 <- as.character(v12)
+
+class(v14)
+
+v15 <- as.logical(v12)
+
+v15
+
+class(v15)
+
+
+
+v16 <- "hitesh"
+
+v17 <- as.numeric(v16)
+
+class(v17)
+
+v17
+
+
+### how to get attributes 
+
+
+v18 <- "my name is hitesh"
+
+attributes(v18)
+
 
 ```
 
-# list
+
+
+
+# list ()
 ## can hold value of multiple class
+
+
+```{r list}
+### while creating list each item is seperate vector
+
+l1 <- list("hitesh", 5 , T)
+
+l1
+
+class(l1)
+
+attributes(l1)
+
+### how to assign names to list objects 
+
+l2 <- list("names" = c("hitesh","gajuji"), "Age" = c(22,50), "alive"= c(T,T))
+
+l2
+
+class(l2)
+
+attributes(l2)
+
+
+```
 
