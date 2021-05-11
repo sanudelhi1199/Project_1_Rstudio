@@ -1,5 +1,0 @@
-a <-
-structure(list(a = "hitesh", b = "solanki"), class = "data.frame", row.names = c(NA, 
--1L))
-b <-
-1:2
