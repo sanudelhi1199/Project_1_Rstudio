@@ -248,3 +248,39 @@ l2
 
 ```
 
+
+# Matrix
+## two dimention holding same class of data
+
+```{r matrix}
+
+
+m1 <- matrix(1:25,nrow = 5,ncol = 5, byrow = F)
+
+m1
+
+m2 <- matrix(1:25,nrow = 5,ncol = 5, byrow = T)
+
+
+### how to create matrix using rbind and cbind
+
+
+rbind(1:5,1:5,1:5)
+
+
+m3 <- cbind(1:5,1:5,1:5)
+
+
+m3
+
+```
+
+
+
+
+
+
+
+
+
+
