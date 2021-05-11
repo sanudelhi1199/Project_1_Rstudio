@@ -80,4 +80,18 @@ class(b)
 ```
 
 
+# how to use length() function to get length
 
+```{r length}
+
+aa <- "hiteshsinh solanki"
+
+print(aa)
+
+length(aa)
+
+bb <- 5555L
+
+length(bb)
+
+````
