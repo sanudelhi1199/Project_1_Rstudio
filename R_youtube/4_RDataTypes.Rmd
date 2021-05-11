@@ -1,0 +1,87 @@
+---
+title: "4_RObjects"
+author: "sanudelhi1199"
+date: "5/11/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# introducing R objects 
+
+# vectors 
+## hold values of same class and declared using vector () and c()
+
+```{r vector}
+
+v1 <- c(1,2,3,4,5,6,7,8,9,10)
+
+v1
+
+
+class(v1)
+
+v2 <- c("hitesh","gajuji","solanki")
+
+v2
+
+class(v2)
+
+v3 <- c(T,F)
+
+v3
+
+class(v3)
+
+### how to create vactor using vactor ()
+
+v4 <- vector("numeric", length = 20)
+
+v4 
+
+class(v4)
+
+length(v4)
+
+### concatinating vector meaning mixing two vector of diffrent class and auto assigning mutual class
+
+v5 <- c("hitesh" , "gajuji")
+
+v6 <- c(1,2)
+
+v7 <- c(v5,v6)
+
+v7 
+
+class(v7)
+
+v8 <- c(T,F)
+
+class(v8)
+
+v9 <- c("True", "False")
+
+class(v9)
+
+v10 <- c(v8,v9)
+
+v10
+
+class(v10)
+
+
+### how to print ABCD
+
+v11 <- letters[1:26]
+
+v11
+
+
+
+```
+
+# list
+## can hold value of multiple class
+
