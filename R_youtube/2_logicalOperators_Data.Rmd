@@ -1,0 +1,101 @@
+---
+title: "2_logicalOperators"
+author: "sanudelhi1199"
+date: "5/11/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# how to use logical operators & and , | or , == not
+
+## & and ----------------------------------
+
+```{r end}
+
+a <- 10>20 & 10<20
+
+print(a)
+
+b <- 10<20 & 10<30
+
+print(b)
+
+
+
+```
+## or | -------------------------------------
+
+```{r or}
+c <- 10>20 | 10<20
+
+print(c)
+
+d <- 10>20 | 10>30
+
+print(d)
+
+```
+
+## equal ==  ---------------------------------------------------
+
+```{r equal}
+e <- 10 == 20
+
+print(e)
+
+f <- 10 == 10
+print(f)
+
+```
+
+## no equal != -------------------------------
+
+```{r notqq}
+
+g <- 10 != 20
+
+print(g)
+
+h <- 10 != 10
+
+print (h)
+```
+
+
+# using  logical operation on datset
+
+
+##h how to read csv file
+
+```{r auction}
+
+auction <- read.csv("C:\\Users\\Administrator\\Desktop\\Data_Science\\Project_1_Rstudio\\Data\\auction.csv")
+
+### how to project data top 5
+
+head(auction)
+
+### how to view in tabular format
+
+View(auction)
+
+### getting perticular data 
+
+a <- auction[auction$bidder == "chuik" & auction$bid == 100,]
+
+a
+
+b <- auction[auction$auctionid >= 150 & auction$openbid >= 50,]
+
+head(b)
+
+c <- auction[auction$bidder == "kiwisstuff" & auction$bid != 150,]
+
+c
+
+
+```
+
