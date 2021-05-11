@@ -31,3 +31,16 @@ print(paste("hello","world", sep = "-"))
 print(paste0("my name","is hitesh "))
 
 ```
+
+
+# how to use sprintf function 
+
+
+```{r sprintf}
+
+sprintf("%s is %i years old", "Hitesh", 22)
+
+sprintf("%s is %s persone", "hitesh", "very good")
+
+
+```
