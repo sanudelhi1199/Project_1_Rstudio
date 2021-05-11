@@ -94,11 +94,11 @@ bb <- 5555L
 
 length(bb)
 
-````
+```
 # how to use print function to print dataset
 
 
-```{r dataset}
+``` {r dataset}
 
 dataset_1 <- mtcars
 
