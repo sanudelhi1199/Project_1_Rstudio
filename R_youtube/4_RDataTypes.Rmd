@@ -151,5 +151,100 @@ class(l2)
 attributes(l2)
 
 
+### hoe to check if it is list
+
+class(l2)
+
+is.list(l2)
+
+### how to give name to list after creating list
+
+
+l3 <- list(c("hitesh","gajuji"),c(22,50), c(T,T))
+
+l3
+
+names(l3) <- c("name","age","alive")
+
+
+l3
+
+### how to get value from list
+
+l3
+
+l3[[1]]
+
+l3[[2]]
+
+l3[[3]]
+
+l3
+
+### how to get well output using str
+
+l4 <-str(l3)
+l4
+
+### how to get specific output from list
+
+l3[[1]]
+
+l3$name[[1]]
+
+l3$name[[2]]
+
+# using similar function 
+
+
+l4 <- list("name" = "rashmika", "age" = 30, "alive" = T)
+
+l2 <- list("names" = c("hitesh","gajuji"), "Age" = c(22,50), "alive"= c(T,T), similar = l4)
+
+l2
+
+# getting perticulat object from list
+
+
+l2[[1]]
+
+l2$names[[1]]
+
+l2$similar[[1]]
+
+l2$similar$name[[1]]
+
+### accessing a list item from name
+
+l2$names
+
+l2[["names"]]
+
+l2[["Age"]]
+
+### how to use logics to get list
+
+l2
+
+
+l2[c(T,F,T,F,T,F)]
+
+
+### how to add vector in list
+
+
+l2
+
+vect <- "kamkhya"
+
+vect2 <- 3
+
+vect3 <- T
+
+l2 <- list("names" = c("hitesh","gajuji", vect), "Age" = c(22,50, vect2), "alive"= c(T,T,vect3), similar = l4)
+
+
+l2
+
 ```
 
