@@ -204,7 +204,168 @@ df2[order(df2$age, decreasing = F)]
 
 ```
 
+# vectors 
+## hold similar value one dimention
 
+``` {r}
+
+v1 <- c("Hitesh","gajuji","manjulaben")
+
+v2 <- c(1,2,3)
+
+v3 <- c(T,T,T)
+
+
+v1;v2;v3
+
+### extrenal coersion 
+
+
+v4 <- c("hitesh",23,T)
+
+v4
+
+
+### creating sequence 
+
+
+v5 <- 1:10
+v5
+
+
+v5 <- seq(1,10)
+v5
+
+v5 <- seq(1,10,5)
+v5
+
+v6 <- seq(from=21, by=5, length = 10)
+v6
+
+
+### how to assign value to vector
+
+
+tempr <- c(45,44,43,42,41)
+
+tempr
+
+names(tempr) <- c("mon","tue","wed","thur","fri")
+
+tempr
+
+tempr["mon"]
+
+tempr[1]
+
+
+### ---------------------------------------------------------------
+
+name <- c("hitesh","gajuji","rashmika","kamakhya")
+
+age <- c(22,50,30,3)
+
+
+names(age) <- name
+
+age
+
+### -------------------------------------------------------------
+
+
+price <- c(100:110)
+
+price
+
+
+names(price) <- paste0("p",1:11)
+
+
+price
+
+
+### mathamatical operation on vector
+
+
+v1 <- c(1,2,3)
+
+
+v2 <- c(4,5,6)
+
+v1 + v2
+
+
+v1[1] + v2[3]
+
+
+v1 * v2
+
+v1 * v2[1]
+
+
+### comparing the vectors
+
+
+
+v1 <- c(4,5,6)
+
+v2 <- c(7,8,9)
+
+v1 > v2 
+
+v2 > v1
+
+v2[2] > v1[2]
+
+
+v1 == v2
+
+v1 != v2
+
+
+v4 <- c(1,2,3,4,5,6,7,8)
+
+v4 > 3
+
+v4 != 3
+
+v4 == 3
+
+
+### --------------------------------------------
+
+
+v5 <- c(101:110)
+
+names(v5) <- paste0("p",1:10)
+
+v5
+
+
+v5[4] == v5["p4"]
+
+
+### how to skeep value
+
+
+v5[c(-2,-4)]
+
+
+### ------------------------
+
+v5
+
+filter <- v5 > 104
+
+v5[filter]
+
+v5[v5>103]
+
+
+
+
+
+```
 
 
 
