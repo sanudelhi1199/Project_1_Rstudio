@@ -362,12 +362,119 @@ v5[filter]
 v5[v5>103]
 
 
+### ----------------------------------------------------
+
+
+v6 <- c(1,2,3,4,NA,6,7,8,9,10)
+
+
+names(v6) <- paste0("N",1:10)
+
+
+v6
+
+
+l <- length(v6)
+
+l
+
+v6[c(l-5,l)]
+
+### -------------------------------------------------
+
+
+v6
+
+
+v6 < 6
+
+v6[v6<6]
+
+
+### how to ommit null values
+
+v6 
+
+v7 <- na.omit(v6)
+
+v7
+
+v6[na.omit(v6) > 4]
+
+### --------------------------------------------
+
+d3 <- (v6 %% 3) == 0 
+
+v6[d3]
+
+na.omit(v6[d3])
+
+
+
+### -----------------------------
+
+
+d3 <- (v6 %% 3) != 0
+
+
+na.omit(v6[d3])
+
+### -----------------------
+
+
+### how to do summation 
+
+
+sum(v6) ### will not give result we have to remove na 
+
+sum(na.omit(v6))
+
+sum(v6,na.rm = T)
+
 
 
 
 ```
 
 
+
+# matrix in detail
+
+```{r}
+
+mat1 <- matrix(0, nrow = 3, ncol = 3)
+
+mat1
+
+mat1 <- matrix(0,3,3)
+
+mat1
+
+mat2 <- matrix(1:9,3,3,byrow = T)
+
+mat2
+
+mat3 <- matrix(1:12,4,3)
+
+mat3
+
+
+### stocks
+
+
+stock1 <- c(222,333,433,4443,444,333)
+
+stock2 <- c(333,445,655,567,789,765)
+
+stock3 <- c(stock1,stock2)
+
+stock3
+
+stock4 <- matrix(stock3,4,3)
+
+stock4
+
+```
 
 
 
