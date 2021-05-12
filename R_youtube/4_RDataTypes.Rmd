@@ -273,6 +273,92 @@ m3 <- cbind(1:5,1:5,1:5)
 
 m3
 
+
+
+#creating matrix
+
+
+mat1 <- matrix(1:100, byrow = T, nrow = 10)
+
+
+mat1
+
+#how to add values to existing matrix
+
+
+
+
+mat1 <- rbind(mat1,111:120)
+
+mat1
+
+
+xx <- c(121:130,131:140)
+
+
+mat1 <- rbind(mat1,121:130)
+
+mat1
+
+
+### add value by cbind()
+
+mat1 <- cbind(mat1,1:15)
+
+
+mat1
+
+### how to add name to matrix
+
+
+
+n <- matrix(1:4, nrow = 2 , byrow = 2)
+
+n
+
+colnames(n) <- c("one","two")
+
+rownames(n) <- c("A","B")
+
+n
+
+#how to give naes to matrix using dimname()
+
+a <- c("hitesh", "Gajuji")
+
+b <- c(22,50)
+
+c <- cbind(a,b)
+
+c
+
+
+dimnames(c) <- list(c(1,2),c("Name","age"))
+
+c
+
+
+# how to bind two vectors using rbind cbind
+
+
+m1 <- matrix(1:6,ncol = 3)
+
+m1
+
+m2 <- matrix(letters[1:6], ncol = 3)
+
+m2
+
+m3 <- rbind(m1,m2)
+
+
+m3
+
+m3 <- cbind(m1,m2)
+
+m3
+
+
 ```
 
 
