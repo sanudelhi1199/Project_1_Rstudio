@@ -1,0 +1,218 @@
+---
+title: "4_RDataTypes_2"
+author: "sanudelhi1199"
+date: "5/12/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Data Types
+
+## Data Frame
+### it stroe value in form of table and multiple class
+#### excample
+
+```{r Dataframe}
+
+family = data.frame("name" = c("hitesh","gajuji","Manjulaben","Rashmika","Kamakhya"),"Relation" = c("Self","Father","Mother","Sister","Bhani"), "age" = c(22,50,48,30,3), "occupation" = c("Student","Farmer","Housewife","Housewife","NA"))
+
+View(family)
+
+print(family)
+
+```
+
+#### how to create data rame using vectors
+
+```{r metrix}
+
+name <- c("Hitesh","Gajuji")
+
+age <- c(22,50)
+
+occupation <- c("student", "Farmers")
+
+
+data_frame_1 <- data.frame(name,age,occupation)
+
+
+print(data_frame_1)
+
+
+
+```
+
+#### how to convert data frame to str
+
+```{r strs}
+
+str(data_frame_1)
+
+
+
+```
+
+#### how to enable disable factor 
+
+```{r factor}
+
+data_frame_1 <- data.frame(name,age,occupation, stringsAsFactors = T)
+
+str(data_frame_1)
+
+data_frame_1 <- data.frame(name,age,occupation, stringsAsFactors = F)
+
+str(data_frame_1)
+
+```
+
+#### how to extract values form data frame 
+
+
+```{r }
+
+data_frame_1
+
+
+data_frame_1[2,3]
+
+data_frame_1$name[2]
+
+data_frame_1$occupation[2]
+
+
+
+```
+
+#### how to get data from data from perticular
+
+```{r}
+
+
+data_frame_1[c(1,2),c("occupation","age")]
+
+
+data_frame_2 <- mtcars
+
+
+View(data_frame_2)
+
+
+data_frame_2["Valiant",c("mpg","hp")]
+
+
+
+```
+
+#### diffrance between [] output in dta frame and [[]] output in vector
+
+
+```{r}
+
+
+data_frame_2[[1]] #### mpg in vector
+
+data_frame_2[1] #### mpg in data frame
+
+
+data_frame_2[["Valiant",c("mpg")]] #### vector formate
+
+data_frame_2["Valiant",c("mpg")] #### data frame
+
+
+
+```
+#### how to add extra row and column in data frame
+
+
+```{r}
+
+name <- c("hitesh","gajuji")
+
+age <- c(22,50)
+
+
+dat_frame_3 <- data.frame(name,age)
+
+dat_frame_3
+
+
+occupation <- c("student","farmer")
+
+dat_frame_3$occupation <- occupation
+
+dat_frame_3
+
+alive <- c(T,T)
+
+cbind(dat_frame_3,alive)
+
+
+df <- data.frame("name" = "rashmika", "age" = "30", "occupation" = "house-wife")
+
+df
+
+
+df2 <- rbind(dat_frame_3,df)
+
+df2
+```
+
+
+#### how to short and order data
+
+```{r}
+
+df2
+
+sort(df2$age)
+
+
+ranks <- order(df2$age)
+
+ranks
+
+df2$age
+
+
+ranks <- order(df$name)
+
+ranks
+
+
+```
+
+
+#### how to order data frame
+
+```{r}
+
+df2
+
+ranks <- order(df2$age)
+
+
+df2[ranks,]
+
+
+
+df2[order(df2$age, decreasing = F)]
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
