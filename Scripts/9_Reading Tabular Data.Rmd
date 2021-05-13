@@ -1,0 +1,80 @@
+---
+title: "9_ReadingTabularData"
+author: "sanudelhi1199"
+date: "5/13/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# how to read tabular data read.tabel and read.csv()
+
+### directly reading  csv file
+
+
+```{r auc}
+
+auc <- read.csv("C:\\Users\\Administrator\\Desktop\\Data_Science\\Project_1_Rstudio\\Data\\auction.csv")
+
+
+head(auc)
+
+
+
+
+```
+
+
+### using file connection 
+
+```{r file}
+
+data_1 <- file("C:\\Users\\Administrator\\Desktop\\Data_Science\\Project_1_Rstudio\\Data\\auction.csv", "r",)
+
+auction <- read.csv(data_1)
+
+print(head(auction))
+
+close(data_1)
+
+```
+
+### how to read first 10 line
+
+
+```{r 10}
+
+data_1 <- file("C:\\Users\\Administrator\\Desktop\\Data_Science\\Project_1_Rstudio\\Data\\auction.csv", "r",)
+
+
+auc <- read.csv(data_1,10)
+
+print(head(auc))
+
+close(data_1)
+
+
+```
+
+### creating connection to url
+
+
+```{r con}
+
+con <- url("http://google.com","r",)
+
+x <- readLines(con)
+
+head(x)
+
+close(con)
+
+
+```
+
+
+
+
+
