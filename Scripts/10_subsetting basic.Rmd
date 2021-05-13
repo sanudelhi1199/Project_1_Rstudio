@@ -1,0 +1,222 @@
+---
+title: "10_subesetting basic"
+author: "sanudelhi1199"
+date: "5/13/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Subsetting
+
+## subsetting using [] retuen similar class
+
+```{r sub}
+
+vect <- c(1,2,3,4,5,6)
+
+x <- vect[3]
+
+y <- vect[3:6]
+
+z <- vect[c(3,6)]
+
+class(c(x,y,z))
+
+
+
+mat1 <- matrix(1:25,5,5)
+
+x <- mat1[5,5]
+
+x
+
+class(x)
+
+typeof(x)
+
+
+
+
+
+
+```
+
+
+## how to use [[]] to get perticular value
+
+
+```{r}
+
+
+x <- list(names = c("hitesh","gajuji"), age = c(22,50), alive = c(T,T))
+
+x
+
+x[1]
+
+class(x[1]) # otuput as list
+
+x[[1]]
+
+class(x[[1]]) #### will give output in vector
+
+y <- data.frame(names = c("hitesh","gajuji"), age = c(22,50), alive = c(T,T))
+
+y
+
+y[1]
+
+class(y[1])
+
+y[[1,1]]
+
+class(y[[1,1]])
+
+
+
+
+
+
+
+```
+## how to use $ for subsetting may not retun similar class
+
+```{r }
+x
+
+x$names
+
+x$names[1]
+
+class(x$names[1])
+
+
+y
+
+y$names[1]
+
+class(y$names[1])
+
+
+```
+
+#  subsetting matrices 
+
+
+```{r }
+
+
+mat1 <- matrix(1:16,4,4)
+
+mat1
+
+
+mat1[2,2]
+
+class(mat1[2,2])
+
+mat1[[2,2]]
+
+class(mat1[[2,2]])
+
+
+mat1[2,]
+
+mat1[,2]
+
+
+#### [] doe not return matrix it self ut if you want matrix output use drop = false
+
+
+mat <- mat1
+
+mat[2,2, drop = FALSE]
+
+mat[2, , drop = FALSE]
+
+mat[,2,drop = FALSE]
+
+```
+
+
+## subsetting partial matching , to avoid typing long name 
+
+```{r }
+list1 <- list(aartwork = 1:5)
+
+list1$a 
+
+list1$aartwork
+
+
+list1["a"]
+
+list1[["a", exact = FALSE]]
+
+
+list2 <- list(aartwork = 1:5 , aarkwork = 11:15)
+
+list2$aark
+
+list2[["aart", exact = FALSE]]
+
+list2[["aark", exact = FALSE]]
+
+
+
+```
+
+
+## removing missing value 
+
+```{r }
+x <- c(1,2,2,35,NA,44645,NA,45,4,5,NA,45,5,5,6,NA)
+
+
+missing_values <- is.na(x)
+
+missing_values
+
+x[!missing_values]
+
+x[missing_values]
+
+
+
+
+y <- data.frame(name = c("a","b",NA , "c" , NA), age = c(4,5,NA,4,5))
+
+y
+
+good <- complete.cases(y)
+
+y[good, , drop = FALSE]
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
